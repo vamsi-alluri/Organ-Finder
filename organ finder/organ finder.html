@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>ORGINDER</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet"> 
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
+    
+
+        <style>
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+
+    .mapboxgl-popup {
+        max-width: 400px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+</style>
+
+</head>
+
+
+<body id="top">
+    
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-jump">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html">
+                
+            </a>
+        </div> <!-- end header-logo -->
+
+        <nav class="header-nav">
+
+            <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+
+            <h3>Navigate to</h3>
+
+            <div class="header-nav__content">
+                
+                <ul class="header-nav__list">
+                    <li><a class="smoothscroll"  href="#home" title="home">Home</a></li>
+                    <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
+                    <li><a class="smoothscroll"  href="#services" title="services">Services</a></li>
+                    <li><a class="smoothscroll"  href="#works" title="works">Maps</a></li>
+                    <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
+                </ul>
+                <ul class="header-nav__social">
+                    <li>
+                        <a href="https://www.facebook.com/orginderofficial"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#0"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/orginderofficial"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#0"><i class="fab fa-behance"></i></a>
+                    </li>
+                    <li>
+                        <a href="#0"><i class="fab fa-dribbble"></i></a>
+                    </li>
+                </ul>
+
+            </div> <!-- end header-nav__content -->
+
+        </nav> <!-- end header-nav -->
+
+        <a class="header-menu-toggle" href="#0">
+            <span class="header-menu-icon"></span>
+        </a>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- home
+    ================================================== -->
+    <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="grid-overlay">
+            <div></div>
+        </div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <h1>
+                ORGINDER
+                </h1>
+
+                <h3>
+                You can't save all , Save one at a time
+                </h3>
+                <h4> Chennai </h4>
+                <div class="home-content__video">
+                    <a class="video-link" href="https://www.youtube.com/watch?v=AEHArg3ffQw" data-lity>
+                        <span class="video-icon"></span>
+                        <span class="video-text">Watch Video</span>
+                    </a>
+                </div>
+
+                <div class="home-content__button">
+                    <a href="#about" class="smoothscroll btn btn--primary btn--large">
+                        More About Us
+                    </a>
+                    <a href="#contact" class="smoothscroll btn btn--large">
+                        Let's Donate
+                    </a>
+                </div>
+
+            </div> <!-- end home-content__main -->
+
+            <div class="home-content__scroll">
+                <a href="#about" class="scroll-link smoothscroll">
+                    Scroll
+                </a>
+            </div>
+
+        </div> <!-- end home-content -->
+
+        <ul class="home-social">
+            <li>
+                <a href="https://www.facebook.com/fnplusofficial/"><i class="fab fa-facebook-f" aria-hidden="true"></i><span>Facebook</span></a>
+            </li>
+          <!--  <li>
+                <a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
+            </li>-->
+            <li>
+                <a href="https://www.instagram.com/fnplusofficial"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fab fa-behance" aria-hidden="true"></i><span>Behance</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i><span>Dribbble</span></a>
+            </li>
+        </ul> <!-- end home-social -->
+
+    </section> <!-- end s-home -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id="about" class="s-about target-section">
+
+        <div class="row section-header bit-narrow" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Who We Are</h3>
+                <h1 class="display-1">
+                We are Organider, a community network to save lifes by donating organs.
+                </h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row bit-narrow" data-aos="fade-up">
+            <div class="col-full">
+                <p class="lead">
+                We are Organider, a community network to save lifes by donating organs.
+                </p>
+            </div>
+        </div> <!-- end about-desc -->
+
+        <div class="row bit-narrow">
+                
+            <div class="about-process process block-1-2 block-tab-full">
+
+                <div class="col-block item-process" data-aos="fade-up">
+                    <div class="item-process__text">
+                        <h4 class="item-title">Define</h4>
+                        <p>
+                        The ORGINDER society is a voluntary humanitarian organization will be having network of over 700 branches throughout the country, providing relief in times of emergencies and promotes health & care of the vulnerable people and communities. It is gonna be a leading member of the largest independent humanitarian organization in the world.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-block item-process" data-aos="fade-up">
+                    <div class="item-process__text">
+                        <h4 class="item-title">Design</h4>
+                        <p>
+                        It is designed after looking at societies like RED CROSS SOCIETY and other organ locator or blood donator websites. 
+                        </p>
+                    </div>
+                </div>
+                <div class="col-block item-process" data-aos="fade-up">
+                    <div class="item-process__text">
+                        <h4 class="item-title">Origin</h4>
+                        <p>
+                        It was created in Vit,chennai during a hackathon and was created to help people who are not able to find organs near them.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-block item-process" data-aos="fade-up">
+                    <div class="item-process__text">
+                        <h4 class="item-title">Launch</h4>
+                        <p>
+                        Most probably we are gonna launch by december,2018.
+                        </p>
+                    </div>
+                </div>
+
+            </div> <!-- end process -->
+
+        </div> <!-- end row -->
+
+    </section> <!-- end s-about -->
+
+
+    <!-- services
+    ================================================== -->
+    <section id='services' class="s-services target-section darker">
+
+        <div class="row section-header bit-narrow" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Orginder</h3>
+                <p class="display-1">
+               Donating an organ takes a lot of balls and most of the time, people will joke about selling your organs to buy something very expensive. But organ donation is one of the most heroic thing to do and if you can donate your organs, you’re going to be living not just one but two lives – including the life of the person whom you donated your organ to. Speaking of that, here are some organ donation quotes that might help you to decide whether you’ll donate yours or not.
+                </p>    
+                </div>
+        </div> <!-- end section-header -->
+
+        <div class="row bit-narrow services block-1-2 block-tab-full">
+
+            <div class="col-block item-service" data-aos="fade-up">
+                <div class="item-service__icon">
+                    <i class="icon-star"></i>
+                </div>
+                <div class="item-service__text">
+                    <h3 class="item-title">Security</h3>
+                    <p><b>All hospital staff, including your administration and medical care team, will take reasonable precautions to protect your personal health information.and Staff who come into contact with your personal health information will maintain the security of that information.</b> 
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block item-service" data-aos="fade-up">
+                <div class="item-service__icon">
+                    <i class="icon-image"></i>
+                </div>
+                <div class="item-service__text">
+                    <h3 class="item-title">Open Source</h3>
+                    <p>This website is gonna be open source so that it can be upgraded if new things comes in the market or new technology arrives</p>
+                </div>
+            </div>
+
+            <div class="col-block item-service" data-aos="fade-up">
+                <div class="item-service__icon">
+                    <i class="icon-group"></i>
+                </div>
+                <div class="item-service__text">
+                    <h3 class="item-title">Health Care</h3>
+                    <p>Health care or healthcare is the maintenance or improvement of health via the prevention, diagnosis, and treatment of disease, illness, injury, and other physical and mental impairments in human beings. Healthcare is delivered by health professionals (providers or practitioners) in allied health fields. Physicians and physician associates are a part of these health professionals. Dentistry, midwifery, nursing, medicine, optometry, audiology, pharmacy, psychology, occupational therapy, physical therapy and other health professions are all part of healthcare. It includes work done in providing primary care, secondary care, and tertiary care, as well as in public health.
+
+                    </p>
+                </div>
+            </div>
+
+            
+
+            <div class="col-block item-service" data-aos="fade-up">
+                <div class="item-service__icon">
+                    <i class="icon-pie-chart"></i>
+                </div>  
+                <div class="item-service__text">
+                    <h3 class="item-title">Logistics</h3>
+                    <p>The number of organ transplantation surgeries has increased particularly in the last decade due to technological and scientific advances in medicine. Despite this increase, many patients, however, remain in waiting lists for transplantation surgery. Main reasons for these waiting lists are that there are limited number of organ donations and specifically problems in the management of organ transplantation activities. An efficient management of the allocation and transportation of organs (in other words, logistics management of organ transplantation) are thus extremely important.
+                    </p>
+                </div>
+            </div>
+
+        </div> <!-- end services -->
+         <div class="wrap">
+             <div class="search">
+                  <input type="text" class="searchTerm" placeholder="Name of the Organ?" name="ser">
+                      <button type="submit" class="searchButton">
+                         <i class="fa fa-search"></i>
+                      </button>
+             </div>
+        </div>
+
+    </section> <!-- end s-services -->
+
+
+    <!-- works
+    ================================================== -->
+    <section id="works" class="s-works target-section">
+    
+   
+
+        <div class="map">
+            <iframe src="map.html" width="110%" height="700" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <a href="new.html" class="btn btn-info" role="button">heart</a>
+        <a href="eyes1.html" class="btn btn-info" role="button">eyes</a>
+        <a href="lungs1.html" class="btn btn-info" role="button">lungs</a>
+
+    <!-- clients
+    ================================================== -->
+    <section id="clients" class="s-clients target-section darker">
+
+        <div class="grid-overlay">
+            <div></div>
+        </div>
+
+        <div class="row section-header text-center narrow" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Our Clients</h3>
+                <h1 class="display-1">Who we have work with</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row clients-wrap" data-aos="fade-up">
+            <div class="col-twelve">
+                <ul class="clients">
+                    <li><a href="#0">Gleneagles Global Health City | </a></li>
+                    <li><a href="#0">Dr. Kamakshi Memorial Hospital | </a></li>
+                    <li><a href="#0">Apollo Speciality Hospitals | </a></li>
+                    <li><a href="#0">Hindu Mission Hospital | </a></li>
+                    <li><a href="#0">Fortis Malar Hospital | </a></li>
+                    <li><a href="#0">Parvathy Hospital | </a></li>
+                    <li><a href="#0">Chennai Krishna Hospital | </a></li>
+                    <li><a href="#0">Madras Institute of Orthopaedics and Traumatology | </a></li>
+                    <li><a href="#0">SIMS Hospital | </a></li>
+                    <li><a href="#0">Kauvery Hospital</a></li>
+                    <li><a href="#0">Prashanth Super Speciality Hospital | </a></li>
+                    <li><a href="#0">Sooriya Hospital</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </section> <!-- end s-clients -->
+
+
+    <!-- testimonies
+    ================================================== -->
+    <section class="s-testimonials">
+
+        <div class="testimonials__icon" data-aos="fade-up"></div>
+
+        <div class="row testimonials narrow">
+
+            <div class="col-full testimonials__slider" data-aos="fade-up">
+
+                <div class="testimonials__slide">
+                    <p>You’ve been with life, so you can also give to others. Organ donations can be done after death. Appreciate that you’re living two living lives at once. Extend the lives of others via your organ donation.</p>
+                    <div class="testimonials__author">
+                        <span>AIMS</span>
+                    </div>
+                </div> <!-- end testimonials__slide -->
+
+                <div class="testimonials__slide">
+                    <p>Thousands of patients die every day because of lack of donor. Once you’ve done using it, give it to others. Especially those who really deserves it. After you pass, pass your organs.</p>
+                    <div class="testimonials__author">
+                        <span>FORTIS</span>
+                    </div>
+                </div> <!-- end testimonials__slide -->
+
+                <div class="testimonials__slide">
+                    <p>For in heaven, there’s no more pain and suffering. Especially if they’re still healthy. 
+Kidneys are shareable. For you’ll be rewarded in heaven. Many people see the world for the first time through someone else’s eyes.</p>
+                    <div class="testimonials__author">
+                        <span>Indian Hospitals Corporation Limited</span>
+                    </div>
+                </div> <!-- end testimonials__slide -->
+                
+            </div> <!-- end testimonials__slider -->
+
+        </div> <!-- end testimonials -->
+
+    </section> <!-- end s-testimonials -->
+
+
+    <!-- contact
+    ================================================== -->
+    <section id="contact" class="s-contact target-section">
+
+            <div class="grid-overlay">
+                <div></div>
+            </div>
+
+        <div class="row section-header narrow" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Keep In Touch</h3>
+                <h1 class="display-1">Feel free to contact us </h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row contact-main" data-aos="fade-up">
+            <div class="col-full">
+                <p class="contact-email">
+                    <a href="https://www.orginder.xyz">&nbsp;<span class="contact-email">ORGINDER</a>
+                </p>
+                <p class="contact-address">
+                SATHYABAMA <br>
+               	Chennai , 600119 IN 
+                </p>
+                <p class="contact-numbers">
+                Contact :&nbsp; +91 95 55 383612 |&nbsp; +91 81 24 737393 <br> prabhat@orginder.xyz, &nbsp; akash@orginder.xyz  
+                </p>
+
+                <ul class="contact-social">
+                    <li>
+                        <a href="https://www.facebook.com/orginderofficial"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#0"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/orginderofficial"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#0"><i class="fab fa-behance"></i></a>
+                    </li>
+                    <li>
+                        <a href="#0"><i class="fab fa-dribbble"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </section> <!-- end s-contact -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+        <div class="row">
+            <div class="col-full ss-copyright">
+                <span>© Copyright ORGINDER 2018</span> 
+                <span>Designed by <a href="https://www.styleshout.com/">team orginder</a></span><br>
+                <span>Apache License 2.0</span>
+            </div>
+        </div>
+
+        <div class="ss-go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top">Back to Top</a>
+        </div>
+    </footer>
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>

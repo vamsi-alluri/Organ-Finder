@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Display a popup on click</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+    
+    </div>
+
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<style>
+    .mapboxgl-popup {
+        max-width: 400px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+</style>
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiYWthc2hzYXJlZW4iLCJhIjoiY2psanJkN2p2MGYweTN3bzUxcWh4bnJiaSJ9.5BcPlOGDRX_kPogpOLxnpw';
+
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9',
+    center: [80.2150, 13.0150],
+    zoom: 11.15
+});
+
+map.on('load', function () {
+    // Add a layer showing the places.
+    map.addLayer({
+        "id": "places",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Gleneagles Global Health City</strong><p><a href=\"https://www.gleneaglesglobalhospitals.com\" target=\"_blank\" title=\"Opens in a new window\">Gleneagles Global Health City</a><br>Address: 439, Medavakkam Road, Perumbakkam, Cheran Nagar, Chennai, Tamil Nadu 600100</br><br>Hours: Open 24 hours</br><br>Phone: 044 4477 7000</br></p>",
+                        "icon": "hospital"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.2067,  12.8986]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Apollo Medical Centre Karapakkam</strong><p><br><a href=\"https://chennai.apollohospitals.com/\" target=\"_blank\" title=\"Opens in a new window\">Apollo Medical Centre Karapakkam</a></br>Address: 2/319, OMR Service Rd, Karappakam, Chennai, Tamil Nadu 600097<br>Hours: Open 24 hours</br></p>",
+                        "icon": "hospital"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.2458, 12.9632]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Dr. Kamakshi Memorial Hospital</strong><p><a href=\"https://www.drkmh.com/\" target=\"_blank\" title=\"Opens in a new window\">Dr. Kamakshi Memorial Hospital</a><br>Address: 1, 200 Feet Radial Rd, Dandeeswarar Nagar, Rose Avenue, Pallikaranai, Chennai, Tamil Nadu 600100</br><br>Hours: Open 24 hours</br><br>Phone: 044 6630 0301</br></p>",
+                        "icon": "hospital"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.2093, 12.9493]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Fortis Malar Hospital</strong><p><a href=\"www.fortishealthcare.com/india/fortis-malar-hospital-in-adyar-tamil-nadu\" target=\"_blank\" title=\"Opens in a new window\">Fortis Malar Hospital</a><br>Address: No. 52, 1st Main Rd, Gandhi Nagar, Adyar, Chennai, Tamil Nadu 600020</br><br>Hours: Open 24 hours</br><br>Phone: 099625 99933</br></p>",
+                        "icon": "hospital"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.2297, 12.9151]
+                    }
+                 }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Annai Arul Hospital</strong><p><a href=\"www.annaiarulhospital.com/\" target=\"_blank\" title=\"Opens in a new window\">Annai Arul Hospital</a><br>Address: No: 270, Mudichur Road, Old Perungalathur, Chennai, Tamil Nadu 600063</br><br>Hours: Open 24 hours</br><br>Phone: 044 7170 0700</br></p>",
+                        "icon": "hospital"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.0881, 12.9207]
+                    }
+                 }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Grace Multispeciality Hospital</strong><p><a href=\"https://grace-multispeciality-hospital.business.site/\" target=\"_blank\" title=\"Opens in a new window\">Grace Multispeciality Hospital</a><br>Address: 84, JV Complex, Medavakkam Main Road, Keelkattalai, Chennai, Tamil Nadu 600117</br><br>Hours: Open 24 hours</br><br>Phone: 092832 09606</br></p>",
+                        "icon": "hospital"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.1868, 12.9569]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Hindu Mission Hospital</strong><p><a href=\"http://hindumissionhospital.in/\" target=\"_blank\" title=\"Opens in a new window\">Hindu Mission Hospital</a><br>Address: 103, GST Road, West Tambaram, Tambaram, Chennai, Tamil Nadu 600045</br><br>Hours: Open 24 hours</br><br>Number of beds: 220</br><br>Founded: 1982</br><br>Phone: 044 2226 2244</br></p>",
+                        "icon": "hospital"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.1140, 12.9239]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Capital Pride Parade</strong><p>The annual <a href=\"http://www.capitalpride.org/parade\" target=\"_blank\" title=\"Opens in a new window\">Capital Pride Parade</a> makes its way through Dupont this Saturday. 4:30 p.m. Free.</p>",
+                        "icon": "hospital"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.2587, 13.0102]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Parvathy Hospital</strong><p><a href=\"http://www.parvathyhospital.com/\" target=\"_blank\" title=\"Opens in a new window\">Parvathy Hospital</a><br>Address: 241, GST Road Chromepet, Near MIT Bridge, Chennai, Tamil Nadu 600044</br><br>Hours: Open 24 hours</br><br>Phone: 044 2238 2248</br></p>",
+                        "icon": "hospital"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.1366, 12.9461]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Chennai Krishna Hospital</strong><p><a href=\"http://www.chennaikrishnahospital.org/\" target=\"_blank\" title=\"Opens in a new window\"><em>Chennai Krishna Hospital</em></a><br>Address: 297, GST Road, [ Near MIT Bridge ], Chrompet, Chennai, Tamil Nadu 600044</br>Hours: Open 24 hours</br><br>Phone: 094447 86535</br></p>",
+                        "icon": "hospital"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.1369, 12.9464]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>SIMS Hospital</strong><p>The annual <a href=\"https://www.simshospitals.com/\" target=\"_blank\" title=\"Opens in a new window\">SIMS Hospital</a><br>Address: (Next to Vadapalani Metro Station) No.1, Jawaharlal Nehru Salai(100 Feet Road), Vadapalani, Chennai, Tamil Nadu 600026</br><br>Hours: Open 24 hours</br><br>Phone: 044 4921 1455</br></p>",
+                        "icon": "hospital"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.2118, 13.0518]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Prashanth Super Speciality Hospital</strong><p>The annual <a href=\"http://www.prashanthhospitals.org/\" target=\"_blank\" title=\"Opens in a new window\">Prashanth Super Speciality Hospital</a><br>Address: No.36 & 36A, Velachery Main Rd, Dhandeeswaram, Velachery, Chennai, Tamil Nadu 600042</br><br>Hours: Open 24 hours</br><br>Phone: 093809 98099</br></p>",
+                        "icon": "hospital"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.2213, 12.9785]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Sooriya Hospital</strong><p>The annual <a href=\"http://www.sooriyahospital.com/\" target=\"_blank\" title=\"Opens in a new window\">Sooriya Hospital</a><br>Address: No.1, Arunachalam Rd, Velayutham Colony, Saligramam, Chennai, Tamil Nadu 600093</br><br>Hours: Open 24 hours</br><br>Phone: 044 2376 1751</br></p>",
+                        "icon": "hospital"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.2035, 13.0482]
+                    }
+                 }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Kavitha Ortho & Multispeciality Hospital</strong><p>The annual <a href=\"https://www.practo.com › ... › Chennai Clinics › Neurosurgery Clinics › Chromepet\" target=\"_blank\" title=\"Opens in a new window\">Kavitha Ortho & Multispeciality Hospital</a><br>Address: 144, Radha Nagar Main Road, Railway Colony, Doctors Colony, Chromepet, Chennai, Tamil Nadu 600044</br><br>Hours: Open 24 hours</br><br>Phone: 094440 09700</br></p>",
+                        "icon": "hospital"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.1513, 12.9503]
+                    }
+                 }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>B.M. Hospital</strong><p>The annual <a href=\"http://bmhospitals.com/\" target=\"_blank\" title=\"Opens in a new window\">B.M. Hospital</a><br>Address: 36, 5th Main Rd, Thillaiganga Nagar, Pazavanthangal, Chennai, Tamil Nadu 600061</br><br>Hours: Open 24 hours</br><br>Phone: 044 2267 1182</br></p>",
+                        "icon": "hospital"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.1901, 12.9888]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Kauvery Hospital</strong><p><a href=\"http://www.kauveryhospital.com/\" target=\"_blank\" title=\"Opens in a new window\">Kauvery Hospital</a><br>Address: No. 81, TT Krishnamachari Rd, CIT Colony, Alwarpet, Chennai, Tamil Nadu 600004</br><br>Hours: Open 24 hours</br><br>Phone: 044 4000 6000</br></p>",
+                        "icon": "hospital"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.2572, 13.0382]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Madras Institute of Orthopaedics and Traumatology</strong><p><a href=\"http://www.miotinternational.com/\" target=\"_blank\">Madras Institute of Orthopaedics and Traumatology</a><br>Address: 4/112, Mount Poonamalle High Rd, Sathya Nagar, Manapakkam, Chennai, Tamil Nadu 600089</br><br>Hours: Open 24 hours</br><br>Krishna Janmashtami might affect these hours</br><br>Number of beds: 1,000</br><br>Founded: February 1999, Manapakkam, Chennai</br><br>Phone: 044 4200 2288</br></p>",
+                        "icon": "hospital"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.1855, 13.0216]
+                    }
+                }]
+            }
+        },
+        "layout": {
+            "icon-image": "{icon}-15",
+            "icon-allow-overlap": true
+        }
+    });
+
+    // When a click event occurs on a feature in the places layer, open a popup at the
+    // location of the feature, with description HTML from its properties.
+    map.on('click', 'places', function (e) {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.description;
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'places', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+        map.getCanvas().style.cursor = '';
+    });
+});
+</script>
+<div class="wrap">
+        <div class="search">
+             <input type="text" class="searchTerm" placeholder="organ name?" name="ser">
+                <button type="submit" class="searchButton">
+                    <i class="fa fa-search"></i>
+                </button>
+        </div>
+</body>
+</html>
